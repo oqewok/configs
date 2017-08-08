@@ -1,0 +1,88 @@
+[user]
+	name		= Andrey Okomin
+	email		= oqewok@gmail.com
+
+
+[credential]
+    helper		= cache --timeout=<5400>
+
+
+[alias]
+
+	# Show aliases
+	aliases		= !git config -l | grep alias | cut -c 7-
+
+    co 			= checkout
+    br 			= branch
+	st 			= status --short
+
+	# Show untracked files
+	stu			= status --untracked-files = no
+
+	# Show history
+	hist		= log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+	# Show commit logs
+	logs		= !git shortlog --summary | sort --reverse --numeric-sort
+
+
+	# Reset origin HEAD
+	return		= !git reset ORIG_HEAD
+
+	refuse		= !git reset --hard HEAD
+
+	undo		= !git reset --soft HEAD^
+
+
+
+	#####EXPERIMENTAL#####
+	lg			= log --graph --all --format=format:'%C(bold blue)%h%C(reset) — %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+	#####EXPERIMENTAL#####
+
+[core]
+	autocrlf	= true
+
+
+[diff]
+    tool = kdiff3
+	guitool = kdiff3
+
+[difftool "kdiff3"]
+    path = F:\\Tools\\KDiff3\\kdiff3.exe
+	trustExitCode = false
+	
+[merge]
+    tool = kdiff3
+
+[mergetool "kdiff3"]
+	path = F:\\Tools\\KDiff3\\kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
+
+
+[color]
+	diff		= true
+	grep		= true
+	status		= true
+	ui			= true
+
+	[color "branch"]
+		current = yellow reverse
+		local   = yellow
+		remote  = green
+
+	[color "diff"]
+		meta	= normal
+		frag	= magenta bold
+		old		= red bold
+		new		= blue bold
+		whitespace = red reverse
+
+	[color "status"]
+		added	= yellow
+		changed	= green
+		untracked  = cyan
+
+
+[log]
+	decorate	= full

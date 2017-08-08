@@ -1,0 +1,9 @@
+BoldAsFont=-1
+Transparency=off
+OpaqueWhenFocused=yes
+FontHeight=10
+BackspaceSendsBS=no
+RightClickAction=menu
+MiddleClickAction=extend
+Columns=128
+Rows=32

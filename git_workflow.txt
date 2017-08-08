@@ -1,0 +1,18 @@
+Use rebase and merge to Keep Your Development Branch in Sync
+
+Use rebase to apply commits downstream onto your development branch.
+Use merge to apply commits from yourdev branch back upstream: http://sites.google.com/a/insoshi.com/insoshi-guides/Git-Guides/merge-vs-rebase
+
+$ git checkout mybranch // checkout my dev branch
+$ vi workingfiles.js // make some changes
+$ git commit -a -m "edits" // commit my changes
+$ git checkout master // checkout my upstream branch
+$ git pull // pull from origin
+$ git rebase master mybranch // apply commits from origin to dev branch
+
+# at this point I'm in mybranch so I can keep working...
+#... or I can push my commits to origin/master
+
+$ git checkout master // back to the upstream branch
+$ git merge mybranch // integrate my changes
+$ git push // push my changes

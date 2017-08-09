@@ -41,6 +41,7 @@
 
 [core]
 	autocrlf	= true
+	editor = F:/Applications/Notepad++/notepad++.exe -multiInst -notabbar -nosession -noPlugin
 
 
 [diff]

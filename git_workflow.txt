@@ -14,5 +14,9 @@ $ git rebase master mybranch // apply commits from origin to dev branch
 #... or I can push my commits to origin/master
 
 $ git checkout master // back to the upstream branch
-$ git merge mybranch // integrate my changes
+
+# Two ways:
+$ git merge --squash feature //that makes 1 commit in master from several commits in feature
+$ git merge mybranch // or integrate all the commits from feature into master
+
 $ git push // push my changes

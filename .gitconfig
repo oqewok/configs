@@ -1,10 +1,6 @@
 [user]
-	name		= Andrey Okomin
-	email		= oqewok@gmail.com
-
-
-[credential]
-    helper		= cache --timeout=5400
+	name = oqewok
+	email = andrey_okomin@mallenom.ru
 
 
 [alias]
@@ -38,28 +34,59 @@
 	#####EXPERIMENTAL#####
 	lg			= log --graph --all --format=format:'%C(bold blue)%h%C(reset) — %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
 	#####EXPERIMENTAL#####
+	
 
-[core]
-	autocrlf	= true
-	editor = F:/Applications/Notepad++/notepad++.exe -multiInst -notabbar -nosession -noPlugin
-
-
+### KDIFF3
+	
 [diff]
     tool = kdiff3
 	guitool = kdiff3
 
 [difftool "kdiff3"]
     path = F:\\Tools\\KDiff3\\kdiff3.exe
-	trustExitCode = false
+	trustExitCode = true
 	
 [merge]
     tool = kdiff3
+	
+[mergetool]
+	prompt = true
 
 [mergetool "kdiff3"]
-	path = F:\\Tools\\KDiff3\\kdiff3.exe
+	path = C:\\Program Files\\KDiff3\\kdiff3.exe
     keepBackup = false
-    trustExitCode = false
+    trustExitCode = true
+	
+### VS Code
+#[merge]
+#    tool = vscode
+#[mergetool "vscode"]
+#    cmd = code --wait $MERGED
+#[diff]
+#    tool = vscode
+#[difftool "vscode"]
+#    cmd = code --wait --diff $LOCAL $REMOTE
 
+
+### VS
+
+#[diff]
+#	tool = vsdiffmerge
+#[difftool]
+#	prompt = true
+#[difftool "vsdiffmerge"]
+#	cmd = 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsDiffMerge.exe' $LOCAL $REMOTE Source Target //ignorespace //t
+#	keepbackup = false
+#	trustexistcode = true
+#[merge]
+#	tool = vsdiffmerge
+#[mergetool]
+#	prompt = true
+#[mergetool "vsdiffmerge"]
+#	cmd = 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsDiffMerge.exe' $LOCAL $REMOTE $BASE $MERGED //ignorespace //m
+#	trustExitCode = true
+#	keepbackup = false
+#
 
 [color]
 	diff		= true
@@ -87,3 +114,6 @@
 
 [log]
 	decorate	= full
+[gui]
+	recentrepo = C:/Users/User/source/repos/automarshal
+	recentrepo = C:/Users/User/source/repos/tmp/Hackathon

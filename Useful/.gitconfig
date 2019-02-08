@@ -2,6 +2,9 @@
 	name = oqewok
 	email = andrey_okomin@mallenom.ru
 
+[core]
+
+	autocrlf = "false"
 
 [alias]
 
@@ -38,34 +41,34 @@
 
 ### KDIFF3
 	
-[diff]
-    tool = kdiff3
-	guitool = kdiff3
-
-[difftool "kdiff3"]
-    path = F:\\Tools\\KDiff3\\kdiff3.exe
-	trustExitCode = true
-	
-[merge]
-    tool = kdiff3
-	
-[mergetool]
-	prompt = true
-
-[mergetool "kdiff3"]
-	path = C:\\Program Files\\KDiff3\\kdiff3.exe
-    keepBackup = false
-    trustExitCode = true
-	
-### VS Code
-#[merge]
-#    tool = vscode
-#[mergetool "vscode"]
-#    cmd = code --wait $MERGED
 #[diff]
-#    tool = vscode
-#[difftool "vscode"]
-#    cmd = code --wait --diff $LOCAL $REMOTE
+#    tool = kdiff3
+#	guitool = kdiff3
+#
+#[difftool "kdiff3"]
+#    path = F:\\Tools\\KDiff3\\kdiff3.exe
+#	trustExitCode = true
+#	
+#[merge]
+#    tool = kdiff3
+#	
+#[mergetool]
+#	prompt = true
+#
+#[mergetool "kdiff3"]
+#	path = C:\\Program Files\\KDiff3\\kdiff3.exe
+#    keepBackup = false
+#    trustExitCode = true
+	
+# VS Code
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait --diff $MERGED
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 
 ### VS
